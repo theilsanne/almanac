@@ -2,9 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// Set VITE_BASE to your GitHub repo name (e.g. '/almanac-pwa/') when deploying
-// to a project page. Leave unset for a custom domain or user/org pages root.
-const base = process.env.VITE_BASE ?? '/';
+const base = process.env.VITE_BASE ?? '/almanac/';
 
 export default defineConfig({
   base,
