@@ -1,0 +1,76 @@
+export interface Wisdom {
+  chinese: string;
+  pinyin:  string;
+  english: string;
+  source:  string;
+  author:  string;
+}
+
+const PROVERBS: Wisdom[] = [
+  { chinese:'學而時習之，不亦說乎？', pinyin:'Xué ér shí xí zhī, bù yì yuè hū?', english:'Is it not a pleasure to learn and to practice what you have learned?', source:'《論語·學而》', author:'孔子' },
+  { chinese:'知己知彼，百戰不殆。', pinyin:'Zhī jǐ zhī bǐ, bǎi zhàn bù dài.', english:'Know yourself and know your enemy, and you need not fear a hundred battles.', source:'《孫子兵法》', author:'孫子' },
+  { chinese:'上善若水。', pinyin:'Shàng shàn ruò shuǐ.', english:'The highest good is like water — it benefits all things without striving.', source:'《道德經·第八章》', author:'老子' },
+  { chinese:'天行健，君子以自強不息。', pinyin:'Tiān xíng jiàn, jūnzǐ yǐ zì qiáng bù xī.', english:'Heaven moves with vigour; a noble person strives ceaselessly to improve themselves.', source:'《易經·乾卦》', author:'' },
+  { chinese:'千里之行，始於足下。', pinyin:'Qiān lǐ zhī xíng, shǐ yú zú xià.', english:'A journey of a thousand miles begins with a single step.', source:'《道德經·第六十四章》', author:'老子' },
+  { chinese:'己所不欲，勿施於人。', pinyin:'Jǐ suǒ bù yù, wù shī yú rén.', english:'Do not impose on others what you yourself do not desire.', source:'《論語·衛靈公》', author:'孔子' },
+  { chinese:'知足者富。', pinyin:'Zhī zú zhě fù.', english:'One who knows contentment is truly wealthy.', source:'《道德經·第三十三章》', author:'老子' },
+  { chinese:'三人行，必有我師焉。', pinyin:'Sān rén xíng, bì yǒu wǒ shī yān.', english:'When three walk together, one of them is surely my teacher.', source:'《論語·述而》', author:'孔子' },
+  { chinese:'不積跬步，無以至千里。', pinyin:'Bù jī kuǐ bù, wú yǐ zhì qiān lǐ.', english:'Without accumulating small steps, you cannot reach a thousand miles.', source:'《荀子·勸學》', author:'荀子' },
+  { chinese:'吾日三省吾身。', pinyin:'Wú rì sān xǐng wú shēn.', english:'I daily examine myself on three points: loyalty, sincerity, and diligence in practice.', source:'《論語·學而》', author:'孔子' },
+  { chinese:'仁者愛人。', pinyin:'Rén zhě ài rén.', english:'The humane person loves others.', source:'《孟子·離婁下》', author:'孟子' },
+  { chinese:'學而不思則罔，思而不學則殆。', pinyin:'Xué ér bù sī zé wǎng, sī ér bù xué zé dài.', english:'Learning without thought is wasted; thought without learning is perilous.', source:'《論語·為政》', author:'孔子' },
+  { chinese:'知者樂水，仁者樂山。', pinyin:'Zhì zhě lè shuǐ, rén zhě lè shān.', english:'The wise delight in water; the humane delight in mountains.', source:'《論語·雍也》', author:'孔子' },
+  { chinese:'過而不改，是謂過矣。', pinyin:'Guò ér bù gǎi, shì wèi guò yǐ.', english:'To make a mistake and not correct it — that is a true mistake.', source:'《論語·衛靈公》', author:'孔子' },
+  { chinese:'勝人者有力，自勝者強。', pinyin:'Shèng rén zhě yǒu lì, zì shèng zhě qiáng.', english:'He who overcomes others has force; he who overcomes himself is truly strong.', source:'《道德經·第三十三章》', author:'老子' },
+  { chinese:'溫故而知新。', pinyin:'Wēn gù ér zhī xīn.', english:'By reviewing what is old, one may discover what is new.', source:'《論語·為政》', author:'孔子' },
+  { chinese:'民為貴，社稷次之，君為輕。', pinyin:'Mín wéi guì, shèjì cì zhī, jūn wéi qīng.', english:'The people are paramount; the state comes next; the ruler is of least importance.', source:'《孟子·盡心下》', author:'孟子' },
+  { chinese:'志不強者智不達。', pinyin:'Zhì bù qiáng zhě zhì bù dá.', english:'One whose will is not firm cannot attain wisdom.', source:'《墨子·修身》', author:'墨子' },
+  { chinese:'窮則變，變則通，通則久。', pinyin:'Qióng zé biàn, biàn zé tōng, tōng zé jiǔ.', english:'When exhausted, transform; when transformed, pass through; when through, endure.', source:'《易經·繫辭下》', author:'' },
+  { chinese:'信言不美，美言不信。', pinyin:'Xìn yán bù měi, měi yán bù xìn.', english:'True words are not beautiful; beautiful words are not true.', source:'《道德經·第八十一章》', author:'老子' },
+  { chinese:'敏而好學，不恥下問。', pinyin:'Mǐn ér hào xué, bù chǐ xià wèn.', english:'Eager to learn and not ashamed to ask those of lesser standing.', source:'《論語·公冶長》', author:'孔子' },
+  { chinese:'富貴不能淫，貧賤不能移，威武不能屈。', pinyin:'Fù guì bù néng yín, pín jiàn bù néng yí, wēi wǔ bù néng qū.', english:'Wealth cannot corrupt, poverty cannot sway, power cannot bend — this is a true hero.', source:'《孟子·滕文公下》', author:'孟子' },
+  { chinese:'道可道，非常道。', pinyin:'Dào kě dào, fēi cháng dào.', english:'The Tao that can be spoken is not the eternal Tao.', source:'《道德經·第一章》', author:'老子' },
+  { chinese:'君子坦蕩蕩，小人長戚戚。', pinyin:'Jūnzǐ tǎn dàng dàng, xiǎo rén cháng qī qī.', english:'The noble person is serene and broad-minded; the petty person is always anxious.', source:'《論語·述而》', author:'孔子' },
+  { chinese:'凡事豫則立，不豫則廢。', pinyin:'Fán shì yù zé lì, bù yù zé fèi.', english:'In all things, preparation brings success; without preparation comes failure.', source:'《禮記·中庸》', author:'' },
+  { chinese:'先天下之憂而憂，後天下之樂而樂。', pinyin:'Xiān tiān xià zhī yōu ér yōu, hòu tiān xià zhī lè ér lè.', english:'Worry before the world worries; rejoice only after the world rejoices.', source:'《岳陽樓記》', author:'范仲淹' },
+  { chinese:'路遙知馬力，日久見人心。', pinyin:'Lù yáo zhī mǎ lì, rì jiǔ jiàn rén xīn.', english:'A long road tests a horse\'s strength; time and hardship reveal a person\'s heart.', source:'古諺', author:'' },
+  { chinese:'禍兮福之所倚，福兮禍之所伏。', pinyin:'Huò xī fú zhī suǒ yǐ, fú xī huò zhī suǒ fú.', english:'Fortune lies within misfortune; misfortune lurks within fortune.', source:'《道德經·第五十八章》', author:'老子' },
+  { chinese:'人有悲歡離合，月有陰晴圓缺。', pinyin:'Rén yǒu bēi huān lí hé, yuè yǒu yīn qíng yuán quē.', english:'People have sorrow and joy, parting and reunion; the moon waxes, wanes, and clouds over.', source:'《水調歌頭》', author:'蘇軾' },
+  { chinese:'非淡泊無以明志，非寧靜無以致遠。', pinyin:'Fēi dàn bó wú yǐ míng zhì, fēi níng jìng wú yǐ zhì yuǎn.', english:'Without tranquillity one cannot clarify purpose; without stillness one cannot reach far.', source:'《誡子書》', author:'諸葛亮' },
+  { chinese:'不以物喜，不以己悲。', pinyin:'Bù yǐ wù xǐ, bù yǐ jǐ bēi.', english:'Neither elated by external gains nor saddened by personal losses.', source:'《岳陽樓記》', author:'范仲淹' },
+  { chinese:'海納百川，有容乃大。', pinyin:'Hǎi nà bǎi chuān, yǒu róng nǎi dà.', english:'The sea accepts a hundred rivers — greatness lies in the capacity for tolerance.', source:'古諺', author:'' },
+  { chinese:'少壯不努力，老大徒傷悲。', pinyin:'Shào zhuàng bù nǔ lì, lǎo dà tú shāng bēi.', english:'Those who do not strive in youth will grieve uselessly in old age.', source:'《長歌行》', author:'漢樂府' },
+  { chinese:'欲窮千里目，更上一層樓。', pinyin:'Yù qióng qiān lǐ mù, gèng shàng yī céng lóu.', english:'To see a thousand miles further, ascend one more floor.', source:'《登鸛雀樓》', author:'王之渙' },
+  { chinese:'天下之難事，必作於易；天下之大事，必作於細。', pinyin:'Tiān xià zhī nán shì, bì zuò yú yì; tiān xià zhī dà shì, bì zuò yú xì.', english:'All difficult things begin with the easy; all great things begin with the small.', source:'《道德經·第六十三章》', author:'老子' },
+  { chinese:'落紅不是無情物，化作春泥更護花。', pinyin:'Luò hóng bù shì wú qíng wù, huà zuò chūn ní gèng hù huā.', english:'Fallen petals are not without feeling — turned to earth, they nurture the flowers anew.', source:'《己亥雜詩》', author:'龔自珍' },
+  { chinese:'一寸光陰一寸金，寸金難買寸光陰。', pinyin:'Yī cùn guāng yīn yī cùn jīn, cùn jīn nán mǎi cùn guāng yīn.', english:'An inch of time is worth an inch of gold; yet gold cannot buy back that inch of time.', source:'古諺', author:'' },
+  { chinese:'聖人不積，既以為人己愈有。', pinyin:'Shèng rén bù jī, jì yǐ wéi rén jǐ yù yǒu.', english:'The sage does not hoard; the more he gives to others, the more he himself possesses.', source:'《道德經·第八十一章》', author:'老子' },
+  { chinese:'有志者，事竟成。', pinyin:'Yǒu zhì zhě, shì jìng chéng.', english:'Where there is a will, there is a way.', source:'《後漢書》', author:'' },
+  { chinese:'見賢思齊焉，見不賢而內自省也。', pinyin:'Jiàn xián sī qí yān, jiàn bù xián ér nèi zì xǐng yě.', english:'On seeing a worthy person, aspire to equal them; on seeing the unworthy, examine yourself inwardly.', source:'《論語·里仁》', author:'孔子' },
+  { chinese:'工欲善其事，必先利其器。', pinyin:'Gōng yù shàn qí shì, bì xiān lì qí qì.', english:'A craftsman who wishes to do his work well must first sharpen his tools.', source:'《論語·衛靈公》', author:'孔子' },
+  { chinese:'積善之家，必有餘慶。', pinyin:'Jī shàn zhī jiā, bì yǒu yú qìng.', english:'A family that accumulates goodness will surely have abundant blessings.', source:'《易經·坤卦》', author:'' },
+  { chinese:'人之生也柔弱，其死也堅強。', pinyin:'Rén zhī shēng yě róu ruò, qí sǐ yě jiān qiáng.', english:'In life, all is soft and yielding; in death, all becomes hard and rigid.', source:'《道德經·第七十六章》', author:'老子' },
+  { chinese:'博學之，審問之，慎思之，明辨之，篤行之。', pinyin:'Bó xué zhī, shěn wèn zhī, shèn sī zhī, míng biàn zhī, dǔ xíng zhī.', english:'Learn broadly, question carefully, reflect deeply, judge clearly, and practise faithfully.', source:'《禮記·中庸》', author:'' },
+  { chinese:'人皆知有用之用，而莫知無用之用。', pinyin:'Rén jiē zhī yǒu yòng zhī yòng, ér mò zhī wú yòng zhī yòng.', english:'Everyone knows the use of the useful; few appreciate the use of the useless.', source:'《莊子·人間世》', author:'莊子' },
+  { chinese:'大學之道，在明明德，在親民，在止於至善。', pinyin:'Dàxué zhī dào, zài míng míng dé, zài qīn mín, zài zhǐ yú zhì shàn.', english:'The way of great learning lies in illuminating virtue, renewing the people, and resting in perfect goodness.', source:'《大學》', author:'' },
+  { chinese:'天下無難事，只怕有心人。', pinyin:'Tiān xià wú nán shì, zhǐ pà yǒu xīn rén.', english:'Nothing in the world is truly difficult; it only requires a determined heart.', source:'古諺', author:'' },
+  { chinese:'士不可以不弘毅，任重而道遠。', pinyin:'Shì bù kě yǐ bù hóng yì, rèn zhòng ér dào yuǎn.', english:'A scholar must be broad-minded and resolute, for the burden is heavy and the road is long.', source:'《論語·泰伯》', author:'孔子' },
+  { chinese:'靜以修身，儉以養德。', pinyin:'Jìng yǐ xiū shēn, jiǎn yǐ yǎng dé.', english:'Stillness cultivates the self; frugality nurtures virtue.', source:'《誡子書》', author:'諸葛亮' },
+  { chinese:'逝者如斯夫，不舍晝夜。', pinyin:'Shì zhě rú sī fū, bù shě zhòu yè.', english:'It flows on like this — the river of time — never ceasing, day or night.', source:'《論語·子罕》', author:'孔子' },
+  { chinese:'知之為知之，不知為不知，是知也。', pinyin:'Zhī zhī wéi zhī zhī, bù zhī wéi bù zhī, shì zhī yě.', english:'To know what you know and know what you do not know — that is true knowledge.', source:'《論語·為政》', author:'孔子' },
+  { chinese:'天下莫柔弱於水，而攻堅強者莫之能勝。', pinyin:'Tiān xià mò róu ruò yú shuǐ, ér gōng jiān qiáng zhě mò zhī néng shèng.', english:'Nothing in the world is as soft as water, yet nothing surpasses it in overcoming the hard.', source:'《道德經·第七十八章》', author:'老子' },
+  { chinese:'不患人之不己知，患不知人也。', pinyin:'Bù huàn rén zhī bù jǐ zhī, huàn bù zhī rén yě.', english:'Do not worry that others do not know you; worry that you do not know others.', source:'《論語·學而》', author:'孔子' },
+  { chinese:'合抱之木，生於毫末。', pinyin:'Hé bào zhī mù, shēng yú háo mò.', english:'A tree that fills both arms grew from the smallest sprout.', source:'《道德經·第六十四章》', author:'老子' },
+  { chinese:'其身正，不令而行；其身不正，雖令不從。', pinyin:'Qí shēn zhèng, bù lìng ér xíng; qí shēn bù zhèng, suī lìng bù cóng.', english:'When the leader is upright, orders are followed without being given; when not, orders are ignored.', source:'《論語·子路》', author:'孔子' },
+  { chinese:'知人者智，自知者明。', pinyin:'Zhī rén zhě zhì, zì zhī zhě míng.', english:'Understanding others is intelligence; understanding oneself is true enlightenment.', source:'《道德經·第三十三章》', author:'老子' },
+  { chinese:'曲則全，枉則直，窪則盈，弊則新。', pinyin:'Qū zé quán, wǎng zé zhí, wā zé yíng, bì zé xīn.', english:'Yield and overcome; bend and be straight; empty and be full; wear out and be new.', source:'《道德經·第二十二章》', author:'老子' },
+  { chinese:'玉不琢，不成器；人不學，不知義。', pinyin:'Yù bù zhuó, bù chéng qì; rén bù xué, bù zhī yì.', english:'Jade unworked cannot become a vessel; a person unschooled cannot know righteousness.', source:'《禮記·學記》', author:'' },
+  { chinese:'路漫漫其修遠兮，吾將上下而求索。', pinyin:'Lù màn màn qí xiū yuǎn xī, wú jiāng shàng xià ér qiú suǒ.', english:'The road ahead is long and the way is far; yet I shall search above and below without ceasing.', source:'《離騷》', author:'屈原' },
+  { chinese:'書山有路勤為徑，學海無涯苦作舟。', pinyin:'Shū shān yǒu lù qín wéi jìng, xué hǎi wú yá kǔ zuò zhōu.', english:'On the mountain of books, diligence is the path; on the boundless sea of learning, hardship is the boat.', source:'古諺', author:'' },
+  { chinese:'君子和而不同，小人同而不和。', pinyin:'Jūnzǐ hé ér bù tóng, xiǎo rén tóng ér bù hé.', english:'The noble person harmonises but does not merely agree; the petty person agrees but does not harmonise.', source:'《論語·子路》', author:'孔子' },
+  { chinese:'立志而聖則聖矣，立志而賢則賢矣。', pinyin:'Lì zhì ér shèng zé shèng yǐ, lì zhì ér xián zé xián yǐ.', english:'Set your will toward sagacity and you become a sage; set it toward virtue and you become virtuous.', source:'《傳習錄》', author:'王陽明' },
+];
+
+export function getWisdomForDayOfYear(dayOfYear: number): Wisdom {
+  return PROVERBS[(dayOfYear - 1) % PROVERBS.length];
+}
