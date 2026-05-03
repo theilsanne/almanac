@@ -8,13 +8,11 @@
  * Usage:  node scripts/gen-icons.mjs
  */
 
-import { createDeflateRaw } from 'zlib';
+import { createDeflate } from 'zlib';
 import { writeFileSync, readFileSync } from 'fs';
-import { promisify } from 'util';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-const deflateRaw = promisify(createDeflateRaw);
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(__dir, '..', 'public');
 
@@ -101,7 +99,7 @@ function drawDesign(size) {
 async function deflate(buf) {
   return new Promise((resolve, reject) => {
     const chunks = [];
-    const d = createDeflateRaw({ level: 6 });
+    const d = createDeflate({ level: 6 });
     d.on('data', c => chunks.push(c));
     d.on('end',  () => resolve(Buffer.concat(chunks)));
     d.on('error', reject);
